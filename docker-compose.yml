@@ -1,0 +1,10 @@
+version: '3'
+services:
+  yield-optimizer:
+    build: .
+    ports:
+      - "80:80"
+    environment:
+      - VITE_DEEPSEEK_API_KEY=sk-8c2cf3f9013a49cab08fa296ae4df9d5
+      - VITE_API_BASE_URL=https://api.llama.fi
+    restart: unless-stopped
